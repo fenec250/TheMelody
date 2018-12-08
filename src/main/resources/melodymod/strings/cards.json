@@ -1,0 +1,53 @@
+{
+  "melodymod:Defend_Melody": {
+    "NAME": "Defend",
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Rhythme",
+    "UPGRADE_DESCRIPTION": ""
+  },
+  "melodymod:Strike_Melody": {
+    "NAME": "Strike",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !M! Rhythme",
+    "UPGRADE_DESCRIPTION": ""
+  },
+  "melodymod:Obsidian_Strike": {
+    "NAME": "Strike",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !M! damage per Rhythme",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain 2 damage per Rhythme"
+  },
+  "melodymod:Clap": {
+    "NAME": "Clap",
+    "DESCRIPTION": "Deal !D! damage. NL Gain 1 Rhythme",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain 1 Rhythme. Draw !M! card"
+  },
+  "melodymod:Offbeat": {
+    "NAME": "Offbeat",
+    "DESCRIPTION": "Deal !D! damage. Tempo 4: hits twice",
+    "UPGRADE_DESCRIPTION": ""
+  },
+  "melodymod:PasDeDeux": {
+    "NAME": "Pas de Deux",
+    "DESCRIPTION": "Gain !B! block. Give 9 block. Dance 2: deal !D! damage to all enemies",
+    "UPGRADE_DESCRIPTION": ""
+  },
+
+
+
+
+  "mysticmodcopy:ClosingBarrage": {
+    "NAME": "Closing Barrage",
+    "DESCRIPTION": "Deals Y damage X times, where Y is equal to your total [#5299DC]Power[] and [#FF5252]Poise[] multiplied by !M!.",
+    "UPGRADE_DESCRIPTION": "Deals Y damage X+1 times, where Y is equal to your total [#5299DC]Power[] and [#FF5252]Poise[] multiplied by !M!.",
+    "EXTENDED_DESCRIPTION": [" NL ( !D! damage)"]
+  },
+  "mysticmodxopy:CureLightWounds": {
+    "NAME": "Cure Light Wounds",
+    "DESCRIPTION": "Gain !M! Regen. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "",
+    "EXTENDED_DESCRIPTION": ["Cure Moderate Wounds"]
+  },
+  "mysticmodft6t:Flourish": {
+    "NAME": "Flourish",
+    "DESCRIPTION": "Costs [E] less for each stack of [#5299DC]Power[] and [#FF5252]Poise[]. Deal !D! damage twice, then double the [#5299DC]Power[] and [#FF5252]Poise[] amounts.",
+    "UPGRADE_DESCRIPTION": ""
+  }
+}

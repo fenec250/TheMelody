@@ -1,0 +1,16 @@
+{
+  "melodymod:RhythmePower": {
+    "NAME": "Rhythme",
+    "DESCRIPTIONS": ["Enables Tempo cards. ", "NL You have gained Rhythme this turn and it will not decay", "NL You have not gained any Rhythme this turn and it will decay by "]
+  },
+  "melodymod:StepPower": {
+    "NAME": "Step",
+    "DESCRIPTIONS": ["Enables Dance cards. Most Melody cards increase this by 1"]
+  },
+
+
+  "mystighjcmod:ArtesPlayedPower": {
+    "NAME": "[#FF5252]Poise[]",
+    "DESCRIPTIONS": ["You have played ", " [#FF5252]Arte[] this turn.", " [#FF5252]Artes[] this turn."]
+  }
+}
