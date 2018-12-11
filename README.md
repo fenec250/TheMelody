@@ -16,8 +16,8 @@ To play the mod, launch ModTheSpire, enable BaseMod and The Melody, then hit Pla
 
 
 New character:   
-The Melody. An artist whose steps brougth to the Spire. Dance around your enemies or beat them in the rhythme.
+The Melody. An artist whose steps brought to the Spire. Dance around your enemies or beat them in the rhythm.
 
 Keywords:
-Rhythme & Tempo: Gain Rhythme use it to unlock Tempo effects on certain cards.
+Rhythm & Tempo: Gain Rhythm use it to unlock Tempo effects on certain cards.
 Dance and Steps: play your cards in the right order to activate Dance effects.

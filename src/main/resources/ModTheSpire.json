@@ -1,8 +1,8 @@
 {
-  "modid": "MysticMod",
-  "name": "The Mystic",
+  "modid": "MelodyMod",
+  "name": "The Melody",
   "author_list": ["Fenec250"],
-  "description": "Adds a new character: The Mystic. Also Fenec's test for The Melody",
+  "description": "Adds a new character: The Melody.",
   "dependencies": ["basemod"],
   "credits": "Johnny Devo for the base project and temp art.",
   "version": "0.0.1",

@@ -1,27 +1,44 @@
 {
   "melodymod:Defend_Melody": {
     "NAME": "Defend",
-    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Rhythme",
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Rhythm",
     "UPGRADE_DESCRIPTION": ""
   },
   "melodymod:Strike_Melody": {
     "NAME": "Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Gain !M! Rhythme",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !M! Rhythm",
     "UPGRADE_DESCRIPTION": ""
   },
-  "melodymod:Obsidian_Strike": {
-    "NAME": "Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Gain !M! damage per Rhythme",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain 2 damage per Rhythme"
+  "melodymod:ObsidianStrike": {
+    "NAME": "Obsidian Strike",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !M! damage per Rhythm until the end of combat",
+    "UPGRADE_DESCRIPTION": ""
+  },
+  "melodymod:BeginnerSteps": {
+    "NAME": "Beginner Steps",
+    "DESCRIPTION": "Draw !M! card. Dance 1: Draw 1 more card and refund 1",
+    "UPGRADE_DESCRIPTION": "Draw !M! card. Dance 1, 4: Draw 1 more card and refund 1"
   },
   "melodymod:Clap": {
     "NAME": "Clap",
-    "DESCRIPTION": "Deal !D! damage. NL Gain 1 Rhythme",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain 1 Rhythme. Draw !M! card"
+    "DESCRIPTION": "Deal !D! damage. NL Gain 1 Rhythm",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain 1 Rhythm. Draw !M! card"
   },
   "melodymod:Offbeat": {
     "NAME": "Offbeat",
-    "DESCRIPTION": "Deal !D! damage. Tempo 4: hits twice",
+    "DESCRIPTION": "Deal !D! damage. Tempo 2: hits twice",
+    "UPGRADE_DESCRIPTION": "",
+    "EXTENDED_DESCRIPTION": ["Deal !D! damage twice"]
+  },
+  "melodymod:Spin": {
+    "NAME": "Spin",
+    "DESCRIPTION": "Deal !D! damage to all enemies. Tempo 3: add a ghost copy in your hand",
+    "UPGRADE_DESCRIPTION": "",
+    "EXTENDED_DESCRIPTION": ["Deal !D! damage to all enemies. Add a ghost copy in your hand."," NL ghost."]
+  },
+  "melodymod:Crotchet": {
+    "NAME": "Crotchet",
+    "DESCRIPTION": "Gain !B! Block. NL Tempo 2: Gain !M! Block next turn",
     "UPGRADE_DESCRIPTION": ""
   },
   "melodymod:PasDeDeux": {
@@ -29,23 +46,28 @@
     "DESCRIPTION": "Gain !B! block. Give 9 block. Dance 2: deal !D! damage to all enemies",
     "UPGRADE_DESCRIPTION": ""
   },
+  "melodymod:BeatOfLife": {
+    "NAME": "Beat of Life",
+    "DESCRIPTION": "When you gain Rhythm, gain !M! time(s) as much block.",
+    "UPGRADE_DESCRIPTION": ""
+  },
 
 
 
 
-  "mysticmodcopy:ClosingBarrage": {
+  "mysticmodref:ClosingBarrage": {
     "NAME": "Closing Barrage",
     "DESCRIPTION": "Deals Y damage X times, where Y is equal to your total [#5299DC]Power[] and [#FF5252]Poise[] multiplied by !M!.",
     "UPGRADE_DESCRIPTION": "Deals Y damage X+1 times, where Y is equal to your total [#5299DC]Power[] and [#FF5252]Poise[] multiplied by !M!.",
     "EXTENDED_DESCRIPTION": [" NL ( !D! damage)"]
   },
-  "mysticmodxopy:CureLightWounds": {
+  "mysticmodref:CureLightWounds": {
     "NAME": "Cure Light Wounds",
     "DESCRIPTION": "Gain !M! Regen. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "",
     "EXTENDED_DESCRIPTION": ["Cure Moderate Wounds"]
   },
-  "mysticmodft6t:Flourish": {
+  "mysticmodref:Flourish": {
     "NAME": "Flourish",
     "DESCRIPTION": "Costs [E] less for each stack of [#5299DC]Power[] and [#FF5252]Poise[]. Deal !D! damage twice, then double the [#5299DC]Power[] and [#FF5252]Poise[] amounts.",
     "UPGRADE_DESCRIPTION": ""

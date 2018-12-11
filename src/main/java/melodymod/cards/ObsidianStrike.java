@@ -14,9 +14,9 @@ import melodymod.patches.AbstractCardEnum;
 import melodymod.patches.MelodyTags;
 import melodymod.powers.RhythmPower;
 
-public class Offbeat
+public class ObsidianStrike
         extends AbstractMelodyCard {
-    public static final String ID = "melodymod:Offbeat";
+    public static final String ID = "melodymod:ObsidianStrike";
     public static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
@@ -24,49 +24,57 @@ public class Offbeat
     public static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
     public static final String IMG_PATH = "mysticmod/images/cards/strike.png";
     private static final int COST = 1;
-    private static final int DAMAGE_AMT = 7;
-    private static final int UPGRADE_DAMAGE_AMT = 3;
-    private static final int TEMPO = 2;
+    private static final int DAMAGE_AMT = 5;
+    private static final int DAMAGE_SCALING = 2;
+    private static final int UPGRADE_DAMAGE_SCALING = 3;
 
-    boolean tempoActive;
-
-    public Offbeat() {
+    public ObsidianStrike() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION,
                 CardType.ATTACK, AbstractCardEnum.MELODY_LIME,
-                CardRarity.COMMON, CardTarget.ENEMY);
+                CardRarity.BASIC, CardTarget.ENEMY);
         this.damage = this.baseDamage = DAMAGE_AMT;
-        this.tags.add(MelodyTags.IS_TEMPO);
-        this.tempoActive = false;
+        this.magicNumber = this.baseMagicNumber = DAMAGE_SCALING;
     }
+
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.step(p);
-        // try to consume Tempo
-        if (!tempoActive && p.hasPower(RhythmPower.POWER_ID) && p.getPower(RhythmPower.POWER_ID).amount >= TEMPO) {
-            AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(p, p, RhythmPower.POWER_ID, TEMPO));
-            tempoActive = true;
-            this.rawDescription = EXTENDED_DESCRIPTION[0];
-            this.initializeDescription();
+        // try to increase damage
+        if (p.hasPower(RhythmPower.POWER_ID)) {
+            int damageIncrease = Math.max(p.getPower(RhythmPower.POWER_ID).amount * this.magicNumber, 0);
+            this.baseDamage += damageIncrease;
+            this.damage += damageIncrease;
         }
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-        if (tempoActive)
-            AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+    }
 
+    @Override
+    public float calculateModifiedCardDamage(AbstractPlayer p, AbstractMonster mo, float tmp) {
+        if (p.hasPower(RhythmPower.POWER_ID)) {
+            tmp += Math.min(p.getPower(RhythmPower.POWER_ID).amount * this.magicNumber, 0);
+        }
+        return tmp;
+    }
+
+    @Override
+    public void applyPowers() {
+        super.applyPowers();
+        this.initializeDescription();
     }
 
     @Override
     public AbstractCard makeCopy() {
-        Offbeat offbeat = new Offbeat();
-        offbeat.tempoActive = this.tempoActive;
-        return offbeat;
+        ObsidianStrike obsidianStrike = new ObsidianStrike();
+        obsidianStrike.upgradeDamage(this.damage - this.baseDamage);
+        return obsidianStrike;
     }
 
     @Override
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeDamage(UPGRADE_DAMAGE_AMT);
+            this.upgradeMagicNumber(UPGRADE_DAMAGE_SCALING);
         }
     }
 }

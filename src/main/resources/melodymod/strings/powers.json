@@ -1,11 +1,15 @@
 {
-  "melodymod:RhythmePower": {
-    "NAME": "Rhythme",
-    "DESCRIPTIONS": ["Enables Tempo cards. ", "NL You have gained Rhythme this turn and it will not decay", "NL You have not gained any Rhythme this turn and it will decay by "]
+  "melodymod:RhythmPower": {
+    "NAME": "Rhythm",
+    "DESCRIPTIONS": ["Enables Tempo cards. Decays by half each turn."]
   },
   "melodymod:StepPower": {
     "NAME": "Step",
     "DESCRIPTIONS": ["Enables Dance cards. Most Melody cards increase this by 1"]
+  },
+  "melodymod:BeatOfLifePower": {
+    "NAME": "BeatOfLifePower",
+    "DESCRIPTIONS": ["When you gain Rhythm, gain ", "as much block.", " times as much block."]
   },
 
 

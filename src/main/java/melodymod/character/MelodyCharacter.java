@@ -16,12 +16,9 @@ import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
-import com.megacrit.cardcrawl.unlock.UnlockTracker;
-import melodymod.cards.DefendMelody;
-import melodymod.cards.StrikeMelody;
+import melodymod.cards.*;
 import melodymod.patches.AbstractCardEnum;
 import melodymod.patches.MelodyEnum;
-import mysticmod.relics.SpellBook;
 
 import java.util.ArrayList;
 
@@ -111,7 +108,7 @@ public class MelodyCharacter extends CustomPlayer {
 
     @Override
     public AbstractCard getStartCardForEvent() {
-        return new StrikeMelody(); // TODO: put Obsidian Strike here
+        return new ObsidianStrike();
     }
 
     @Override
@@ -158,10 +155,14 @@ public class MelodyCharacter extends CustomPlayer {
         retVal.add(StrikeMelody.ID);
         retVal.add(StrikeMelody.ID);
         retVal.add(StrikeMelody.ID);
+
         retVal.add(DefendMelody.ID);
         retVal.add(DefendMelody.ID);
         retVal.add(DefendMelody.ID);
         retVal.add(DefendMelody.ID);
+
+        retVal.add(BeginnerSteps.ID);
+        retVal.add(ObsidianStrike.ID);
         return retVal;
     }
 

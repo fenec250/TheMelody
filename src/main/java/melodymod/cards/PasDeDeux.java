@@ -2,7 +2,6 @@ package melodymod.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -12,7 +11,6 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import melodymod.patches.AbstractCardEnum;
 import melodymod.patches.MelodyTags;
-import melodymod.powers.RhythmePower;
 import melodymod.powers.StepPower;
 
 public class PasDeDeux
@@ -31,9 +29,9 @@ public class PasDeDeux
     public PasDeDeux() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION,
                 CardType.ATTACK, AbstractCardEnum.MELODY_LIME,
-                CardRarity.COMMON, CardTarget.ENEMY);
+                CardRarity.RARE, CardTarget.ENEMY);
         this.damage = this.baseDamage = DAMAGE_AMT;
-        this.tags.add(MelodyTags.IS_RYTHME);
+        this.tags.add(MelodyTags.IS_DANCE);
     }
 
     @Override
