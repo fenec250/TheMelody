@@ -1,6 +1,5 @@
 package melodymod.cards;
 
-import basemod.helpers.BaseModCardTags;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
@@ -15,9 +14,9 @@ import melodymod.patches.AbstractCardEnum;
 import melodymod.patches.MelodyTags;
 import melodymod.powers.RhythmPower;
 
-public class Crotchet
+public class Rest
         extends AbstractMelodyCard {
-    public static final String ID = "melodymod:Crotchet";
+    public static final String ID = "melodymod:Rest";
     public static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
@@ -28,17 +27,16 @@ public class Crotchet
     private static final int UPGRADE_PLUS_BLOCK = 3;
     private static final int TEMPO  = 2;
     private static final int TEMPO_BLOCK = 4;
-    private static final int UPGRADE_TEMPO_BLOCK = 6;
+    private static final int UPGRADE_TEMPO_BLOCK = 2;
 
     boolean tempoActive;
 
-    public Crotchet() {
+    public Rest() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION,
                 CardType.SKILL, AbstractCardEnum.MELODY_LIME,
                 CardRarity.COMMON, CardTarget.SELF);
         this.block = this.baseBlock = BLOCK_AMT;
         this.magicNumber = this.baseMagicNumber = TEMPO_BLOCK;
-        this.tags.add(BaseModCardTags.BASIC_DEFEND);
         this.tags.add(MelodyTags.IS_TEMPO);
         this.tempoActive = false;
     }
@@ -59,7 +57,7 @@ public class Crotchet
     @Override
     public AbstractCard makeCopy() {
         // TODO: make the copy match tempoActive
-        return new Offbeat();
+        return new Rest();
     }
 
     @Override

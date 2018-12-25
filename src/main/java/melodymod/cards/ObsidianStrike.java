@@ -26,7 +26,7 @@ public class ObsidianStrike
     private static final int COST = 1;
     private static final int DAMAGE_AMT = 5;
     private static final int DAMAGE_SCALING = 2;
-    private static final int UPGRADE_DAMAGE_SCALING = 3;
+    private static final int UPGRADE_DAMAGE_SCALING = 1;
 
     public ObsidianStrike() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION,
@@ -59,9 +59,13 @@ public class ObsidianStrike
 
     @Override
     public void applyPowers() {
+        if (AbstractDungeon.player.hasPower(RhythmPower.POWER_ID)) {
+            this.damage = baseDamage + Math.max(AbstractDungeon.player.getPower(RhythmPower.POWER_ID).amount * this.magicNumber, 0);
+        }
         super.applyPowers();
         this.initializeDescription();
     }
+
 
     @Override
     public AbstractCard makeCopy() {

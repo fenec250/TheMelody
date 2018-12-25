@@ -30,15 +30,30 @@
     "UPGRADE_DESCRIPTION": "",
     "EXTENDED_DESCRIPTION": ["Deal !D! damage twice"]
   },
+  "melodymod:Semibreve": {
+    "NAME": "Semibreve",
+    "DESCRIPTION": "Deal !D! damage to all enemies. NL Gain !M! Rhythm",
+    "UPGRADE_DESCRIPTION": ""
+  },
   "melodymod:Spin": {
     "NAME": "Spin",
     "DESCRIPTION": "Deal !D! damage to all enemies. Tempo 3: add a ghost copy in your hand",
     "UPGRADE_DESCRIPTION": "",
     "EXTENDED_DESCRIPTION": ["Deal !D! damage to all enemies. Add a ghost copy in your hand."," NL ghost."]
   },
-  "melodymod:Crotchet": {
-    "NAME": "Crotchet",
+  "melodymod:Rest": {
+    "NAME": "Rest",
     "DESCRIPTION": "Gain !B! Block. NL Tempo 2: Gain !M! Block next turn",
+    "UPGRADE_DESCRIPTION": ""
+  },
+  "melodymod:RisingDove": {
+    "NAME": "Rising Dove",
+    "DESCRIPTION": "Gain !B! Block. NL Dance 2: Apply !M! Weak",
+    "UPGRADE_DESCRIPTION": ""
+  },
+  "melodymod:PiercingChant": {
+    "NAME": "Piercing Chant",
+    "DESCRIPTION": "Reduce the strength of all enemies by !M! for this turn. NL Gain 2 Rhythm. NL Exhaust",
     "UPGRADE_DESCRIPTION": ""
   },
   "melodymod:PasDeDeux": {
@@ -46,10 +61,20 @@
     "DESCRIPTION": "Gain !B! block. Give 9 block. Dance 2: deal !D! damage to all enemies",
     "UPGRADE_DESCRIPTION": ""
   },
+  "melodymod:Refrain": {
+    "NAME": "Refrain",
+    "DESCRIPTION": "Gain !M! Rhythm at the start of your turn.",
+    "UPGRADE_DESCRIPTION": ""
+  },
   "melodymod:BeatOfLife": {
     "NAME": "Beat of Life",
     "DESCRIPTION": "When you gain Rhythm, gain !M! time(s) as much block.",
     "UPGRADE_DESCRIPTION": ""
+  },
+  "melodymod:ShiningStar": {
+    "NAME": "Shining Star",
+    "DESCRIPTION": "Fetch a Dance from your draw pile. NL Dance 1: gain Rhythm equal to that dance's cost.",
+    "UPGRADE_DESCRIPTION": "Fetch a Dance from your draw pile. Dance 1, 2, 3: gain Rhythm equal to that dance's cost."
   },
 
 

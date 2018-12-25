@@ -82,14 +82,18 @@ public class MelodyMod implements EditCardsSubscriber, EditCharactersSubscriber,
         //10 attacks
         BaseMod.addCard(new Offbeat());
         BaseMod.addCard(new Clap());
+        BaseMod.addCard(new Semibreve());
         //8 skills
-        BaseMod.addCard(new Crotchet());
+        BaseMod.addCard(new Rest());
+        BaseMod.addCard(new RisingDove());
+        BaseMod.addCard(new PiercingChant());
 
         //Uncommons
         //11 attacks
         BaseMod.addCard(new Spin());
         //18 skills
         //6 powers
+        BaseMod.addCard(new Refrain());
 
         //Rares.
         //4 attacks

@@ -1,6 +1,7 @@
 package melodymod.cards;
 
 import basemod.abstracts.CustomCard;
+import com.badlogic.gdx.utils.Array;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -23,8 +24,12 @@ public abstract class AbstractMelodyCard extends CustomCard {
         AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p,p,new StepPower(p, 1), 1));
     }
 
-    protected boolean dance(AbstractPlayer p, int step) {
-        return (p.getPower(StepPower.POWER_ID).amount == step);
+    protected boolean dance(AbstractPlayer p, Array<Integer> steps) {
+        if (steps.contains(p.getPower(StepPower.POWER_ID).amount, false)) {
+            // trigger onDance effects
+            return true;
+        }
+        return false;
     }
 //
 //    public void upgradeToArte() {

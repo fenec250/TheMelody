@@ -7,8 +7,12 @@
     "NAME": "Step",
     "DESCRIPTIONS": ["Enables Dance cards. Most Melody cards increase this by 1"]
   },
+  "melodymod:RefrainPower": {
+    "NAME": "Refrain",
+    "DESCRIPTIONS": ["Gain ", " Rhythm at the start of your turn."]
+  },
   "melodymod:BeatOfLifePower": {
-    "NAME": "BeatOfLifePower",
+    "NAME": "Beat of Life",
     "DESCRIPTIONS": ["When you gain Rhythm, gain ", "as much block.", " times as much block."]
   },
 
