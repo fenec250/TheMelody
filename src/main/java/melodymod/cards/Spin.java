@@ -20,11 +20,11 @@ public class Spin
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     public static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
-    public static final String IMG_PATH = "mysticmod/images/cards/strike.png";
+    public static final String IMG_PATH = "melodymod/images/cards/strike.png";
     private static final int COST = 1;
     private static final int DAMAGE_AMT = 7;
     private static final int UPGRADE_DAMAGE_AMT = 3;
-    private static final int TEMPO = 3;
+    private static final int TEMPO = 2;
 
     boolean tempoActive;
     boolean isEcho;
@@ -56,7 +56,8 @@ public class Spin
 
         if (tempoActive) {
             Spin card = (Spin) this.makeStatEquivalentCopy();
-            card.name = "Echo: " + card.name;
+            if (!this.isEcho)
+                card.name = "Echo: " + card.name;
             card.exhaust = true;
             card.isEthereal = true;
             card.costForTurn = 1;

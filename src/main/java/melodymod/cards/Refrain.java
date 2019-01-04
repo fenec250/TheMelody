@@ -18,7 +18,7 @@ public class Refrain
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
-    public static final String IMG_PATH = "mysticmod/images/cards/strike.png";
+    public static final String IMG_PATH = "melodymod/images/cards/strike.png";
     private static final int COST = 1;
     private static final int RHYTHM_AMT = 1;
 

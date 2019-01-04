@@ -1,7 +1,7 @@
 {
   "melodymod:Defend_Melody": {
     "NAME": "Defend",
-    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Rhythm",
+    "DESCRIPTION": "Gain !B! Block. NL Dance 1",
     "UPGRADE_DESCRIPTION": ""
   },
   "melodymod:Strike_Melody": {
@@ -16,8 +16,8 @@
   },
   "melodymod:BeginnerSteps": {
     "NAME": "Beginner Steps",
-    "DESCRIPTION": "Draw !M! card. Dance 1: Draw 1 more card and refund 1",
-    "UPGRADE_DESCRIPTION": "Draw !M! card. Dance 1, 4: Draw 1 more card and refund 1"
+    "DESCRIPTION": "Draw !M! card. Dance 3",
+    "UPGRADE_DESCRIPTION": ""
   },
   "melodymod:Clap": {
     "NAME": "Clap",
@@ -26,13 +26,18 @@
   },
   "melodymod:Offbeat": {
     "NAME": "Offbeat",
-    "DESCRIPTION": "Deal !D! damage. Tempo 2: hits twice",
+    "DESCRIPTION": "Deal !D! damage. Tempo 1: hits twice",
     "UPGRADE_DESCRIPTION": "",
     "EXTENDED_DESCRIPTION": ["Deal !D! damage twice"]
   },
   "melodymod:Semibreve": {
     "NAME": "Semibreve",
     "DESCRIPTION": "Deal !D! damage to all enemies. NL Gain !M! Rhythm",
+    "UPGRADE_DESCRIPTION": ""
+  },
+  "melodymod:TripleStep": {
+    "NAME": "Triple Steps",
+    "DESCRIPTION": "Deal 3 times !D! damage. NL Dance 2",
     "UPGRADE_DESCRIPTION": ""
   },
   "melodymod:Spin": {
@@ -43,12 +48,17 @@
   },
   "melodymod:Rest": {
     "NAME": "Rest",
-    "DESCRIPTION": "Gain !B! Block. NL Tempo 2: Gain !M! Block next turn",
+    "DESCRIPTION": "Gain !B! Block. NL Tempo 1: Gain !M! Block next turn",
     "UPGRADE_DESCRIPTION": ""
   },
   "melodymod:RisingDove": {
     "NAME": "Rising Dove",
     "DESCRIPTION": "Gain !B! Block. NL Dance 2: Apply !M! Weak",
+    "UPGRADE_DESCRIPTION": ""
+  },
+  "melodymod:SideStep": {
+    "NAME": "Side Step",
+    "DESCRIPTION": "Gain !B! Block. NL Dance 1",
     "UPGRADE_DESCRIPTION": ""
   },
   "melodymod:PiercingChant": {
@@ -85,12 +95,6 @@
     "DESCRIPTION": "Deals Y damage X times, where Y is equal to your total [#5299DC]Power[] and [#FF5252]Poise[] multiplied by !M!.",
     "UPGRADE_DESCRIPTION": "Deals Y damage X+1 times, where Y is equal to your total [#5299DC]Power[] and [#FF5252]Poise[] multiplied by !M!.",
     "EXTENDED_DESCRIPTION": [" NL ( !D! damage)"]
-  },
-  "mysticmodref:CureLightWounds": {
-    "NAME": "Cure Light Wounds",
-    "DESCRIPTION": "Gain !M! Regen. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "",
-    "EXTENDED_DESCRIPTION": ["Cure Moderate Wounds"]
   },
   "mysticmodref:Flourish": {
     "NAME": "Flourish",

@@ -39,12 +39,13 @@ public class RhythmPower extends AbstractPower {
 //            description = DESCRIPTIONS[0] + DESCRIPTIONS[2] + this.amount/2;
         description = DESCRIPTIONS[0];
     }
-
-    @Override
-    public void atStartOfTurn() {
+//
+//    @Override
+//    public void atStartOfTurn() {
 //        decay = true;
         // if we can gain Rhythme during opponents turns we should do that at the same time as the Decay.
 //        this.flashWithoutSound();
+//    }
 
     public void stackPower(int stackAmount) {
         this.fontScale = 8.0F;

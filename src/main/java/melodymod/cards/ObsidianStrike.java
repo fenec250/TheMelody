@@ -22,7 +22,7 @@ public class ObsidianStrike
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     public static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
-    public static final String IMG_PATH = "mysticmod/images/cards/strike.png";
+    public static final String IMG_PATH = "melodymod/images/cards/strike.png";
     private static final int COST = 1;
     private static final int DAMAGE_AMT = 5;
     private static final int DAMAGE_SCALING = 2;

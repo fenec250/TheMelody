@@ -31,7 +31,7 @@ public class PiercingChant
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
-    public static final String IMG_PATH = "mysticmod/images/cards/strike.png";
+    public static final String IMG_PATH = "melodymod/images/cards/strike.png";
     private static final int COST = 1;
     private static final int STRENGTH_DOWN = 5;
     private static final int UPGRADE_STRENGTH_DOWN = 2;
@@ -49,7 +49,7 @@ public class PiercingChant
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.step(p);
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new RhythmPower(p, RHYTHM), this.magicNumber, true));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new RhythmPower(p, RHYTHM), this.RHYTHM, true));
 
         //copy from PiercingWail
         AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_PIERCING_WAIL"));

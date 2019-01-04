@@ -5,7 +5,11 @@
   },
   "melodymod:StepPower": {
     "NAME": "Step",
-    "DESCRIPTIONS": ["Enables Dance cards. Most Melody cards increase this by 1"]
+    "DESCRIPTIONS": ["The number of steps since you started dancing."]
+  },
+  "melodymod:DancePower": {
+    "NAME": "Dance",
+    "DESCRIPTIONS": ["The next card played is free if it is a Dance of lower value."]
   },
   "melodymod:RefrainPower": {
     "NAME": "Refrain",

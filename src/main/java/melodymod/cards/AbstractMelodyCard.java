@@ -9,6 +9,9 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import melodymod.powers.StepPower;
 
 public abstract class AbstractMelodyCard extends CustomCard {
+    public int dance;
+    public int preDanceCost;
+//    public boolean isDancing;
 //    public int baseSecondMagicNumber;
 //    public int secondMagicNumber;
 //    public boolean isSecondMagicNumberModified;
@@ -21,17 +24,26 @@ public abstract class AbstractMelodyCard extends CustomCard {
     }
 
     protected void step(AbstractPlayer p) {
-        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p,p,new StepPower(p, 1), 1));
+//        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(p,p,new StepPower(p, 1), 1));
     }
 
-    protected boolean dance(AbstractPlayer p, Array<Integer> steps) {
-        if (steps.contains(p.getPower(StepPower.POWER_ID).amount, false)) {
-            // trigger onDance effects
-            return true;
-        }
-        return false;
+    protected void dance(AbstractPlayer p) {
+//        AbstractDungeon.actionManager.addToBottom(new DanceAction(dance));
     }
-//
+
+	@Override
+	public void setCostForTurn(int amt) {
+		this.setCostForTurn(amt, false);
+	}
+
+	public void setCostForTurn(int amt, boolean isDancing) {
+		this.preDanceCost = this.cost;
+		super.setCostForTurn(amt);
+		if (!isDancing)
+			this.preDanceCost = this.costForTurn;
+	}
+
+	//
 //    public void upgradeToArte() {
 //        this.tags.add(MysticTags.IS_ARTE);
 //    }
