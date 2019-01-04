@@ -39,9 +39,9 @@ public class BeginnerSteps
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        this.dance(p);
 //        AbstractDungeon.actionManager.addToBottom(new RefundAction(this, DANCE_REFUND));
         AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, this.magicNumber));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DancePower(p, this.dance), this.dance));
     }
 
     @Override

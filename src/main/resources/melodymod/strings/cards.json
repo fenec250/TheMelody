@@ -26,7 +26,7 @@
   },
   "melodymod:Offbeat": {
     "NAME": "Offbeat",
-    "DESCRIPTION": "Deal !D! damage. Tempo 1: hits twice",
+    "DESCRIPTION": "Deal !D! damage. NL Tempo 1: hits twice",
     "UPGRADE_DESCRIPTION": "",
     "EXTENDED_DESCRIPTION": ["Deal !D! damage twice"]
   },
@@ -42,7 +42,7 @@
   },
   "melodymod:Spin": {
     "NAME": "Spin",
-    "DESCRIPTION": "Deal !D! damage to all enemies. Tempo 3: add a ghost copy in your hand",
+    "DESCRIPTION": "Deal !D! damage to all enemies. Tempo 2: add a ghost copy in your hand",
     "UPGRADE_DESCRIPTION": "",
     "EXTENDED_DESCRIPTION": ["Deal !D! damage to all enemies. Add a ghost copy in your hand."," NL ghost."]
   },
@@ -74,7 +74,7 @@
   "melodymod:Refrain": {
     "NAME": "Refrain",
     "DESCRIPTION": "Gain !M! Rhythm at the start of your turn.",
-    "UPGRADE_DESCRIPTION": ""
+    "UPGRADE_DESCRIPTION": "Innate. NL Gain !M! Rhythm at the start of your turn."
   },
   "melodymod:BeatOfLife": {
     "NAME": "Beat of Life",

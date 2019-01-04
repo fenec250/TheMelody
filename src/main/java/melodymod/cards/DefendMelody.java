@@ -42,11 +42,10 @@ public class DefendMelody
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.step(p);
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
+        this.dance(p);
 //        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(
 //                p, p, new RhythmPower(p, this.magicNumber), this.magicNumber, true));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DancePower(p, this.dance)));
     }
 
     @Override

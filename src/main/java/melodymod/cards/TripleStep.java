@@ -41,10 +41,10 @@ public class TripleStep
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        this.dance(p);
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn)));
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn)));
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn)));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DancePower(p, this.dance), this.dance));
     }
 
     @Override
@@ -56,7 +56,7 @@ public class TripleStep
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeBlock(UPGRADE_PLUS_DAMAGE);
+            this.upgradeDamage(UPGRADE_PLUS_DAMAGE);
         }
     }
 }

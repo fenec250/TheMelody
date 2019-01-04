@@ -6,10 +6,11 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import melodymod.powers.DancePower;
 import melodymod.powers.StepPower;
 
 public abstract class AbstractMelodyCard extends CustomCard {
-    public int dance;
+    public int dance = -1;
     public int preDanceCost;
 //    public boolean isDancing;
 //    public int baseSecondMagicNumber;
@@ -28,7 +29,11 @@ public abstract class AbstractMelodyCard extends CustomCard {
     }
 
     protected void dance(AbstractPlayer p) {
-//        AbstractDungeon.actionManager.addToBottom(new DanceAction(dance));
+		this.dance(p, this.dance);
+    }
+
+	protected void dance(AbstractPlayer p, int dance) {
+	    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DancePower(p, dance)));
     }
 
 	@Override
