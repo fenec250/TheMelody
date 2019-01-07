@@ -76,10 +76,16 @@
     "DESCRIPTION": "Gain !M! Rhythm at the start of your turn.",
     "UPGRADE_DESCRIPTION": "Innate. NL Gain !M! Rhythm at the start of your turn."
   },
+  "melodymod:Hot": {
+    "NAME": "Hot",
+    "DESCRIPTION": "When you Dance, deal !M! damage times the number of Steps to all enemies",
+    "UPGRADE_DESCRIPTION": "When you Dance, deal !M! damage times the number of Steps to all enemies. NL Dance 2"
+  },
   "melodymod:BeatOfLife": {
     "NAME": "Beat of Life",
     "DESCRIPTION": "When you gain Rhythm, gain !M! time(s) as much block.",
-    "UPGRADE_DESCRIPTION": ""
+    "UPGRADE_DESCRIPTION": "",
+    "EXTENDED_DESCRIPTION": [" NL Gain "," Rhythm."]
   },
   "melodymod:ShiningStar": {
     "NAME": "Shining Star",

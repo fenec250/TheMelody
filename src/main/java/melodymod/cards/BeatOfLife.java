@@ -17,16 +17,21 @@ public class BeatOfLife
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+    public static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
     public static final String IMG_PATH = "melodymod/images/cards/strike.png";
     private static final int COST = 1;
-    private static final int UPGRADED_COST = 0;
+    private static final int RHYTHM = 0;
+    private static final int UPGRADE_RHYTHM = 2;
     private static final int BLOCK_AMT = 1;
+
+    protected int rhythm;
 
     public BeatOfLife() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION,
                 CardType.POWER, AbstractCardEnum.MELODY_LIME,
                 CardRarity.RARE, CardTarget.SELF);
         this.magicNumber = this.baseMagicNumber = BLOCK_AMT;
+        this.rhythm = RHYTHM;
     }
 
     @Override
@@ -44,7 +49,8 @@ public class BeatOfLife
     @Override
     public void upgrade() {
         if (!this.upgraded) {
-            this.cost = UPGRADED_COST;
+            this.rhythm += UPGRADE_RHYTHM;
+            this.rawDescription = DESCRIPTION + EXTENDED_DESCRIPTION[0] + this.rhythm + EXTENDED_DESCRIPTION[1];
             this.upgradeName();
         }
     }
