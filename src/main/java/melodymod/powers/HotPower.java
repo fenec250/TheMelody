@@ -2,6 +2,7 @@ package melodymod.powers;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.evacipated.cardcrawl.mod.stslib.powers.abstracts.TwoAmountPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
@@ -52,12 +53,10 @@ public class HotPower extends AbstractPower {
 
     @Override
     public void onApplyPower(AbstractPower power, AbstractCreature target, AbstractCreature source) {
-        if (power.ID.equals(StepPower.POWER_ID)) {
-//        if (power.ID.equals(DancePower.POWER_ID)) {
+        if (power.ID.equals(DancePower.POWER_ID)) {
             this.flashWithoutSound();
             AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(
-                    this.owner, DamageInfo.createDamageMatrix(power.amount, true),
-//                    this.owner, DamageInfo.createDamageMatrix(((TwoAmountPower) power).amount2, true),
+                    this.owner, DamageInfo.createDamageMatrix(((TwoAmountPower) power).amount2, true),
                     DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.FIRE, true));
         }
     }

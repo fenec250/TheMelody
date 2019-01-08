@@ -9,7 +9,7 @@
   },
   "melodymod:DancePower": {
     "NAME": "Dance",
-    "DESCRIPTIONS": ["The next card played is free if it is a Dance of lower value."]
+    "DESCRIPTIONS": ["The next card played is free if it is a Dance less than ", ". You played ", " steps in this dance"]
   },
   "melodymod:RefrainPower": {
     "NAME": "Refrain",

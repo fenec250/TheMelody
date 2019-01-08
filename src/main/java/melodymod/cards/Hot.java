@@ -50,6 +50,7 @@ public class Hot
         if (!this.upgraded) {
             this.upgradeName();
             this.rawDescription = UPGRADE_DESCRIPTION;
+            this.initializeDescription();
             this.tags.add(MelodyTags.IS_DANCE);
         }
     }

@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import melodymod.patches.AbstractCardEnum;
 import melodymod.powers.BeatOfLifePower;
+import melodymod.powers.RhythmPower;
 
 public class BeatOfLife
         extends AbstractMelodyCard {
@@ -22,7 +23,7 @@ public class BeatOfLife
     private static final int COST = 1;
     private static final int RHYTHM = 0;
     private static final int UPGRADE_RHYTHM = 2;
-    private static final int BLOCK_AMT = 1;
+    private static final int BLOCK_AMT = 2;
 
     protected int rhythm;
 
@@ -38,7 +39,9 @@ public class BeatOfLife
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(
                 p, p, new BeatOfLifePower(p, this.magicNumber), this.magicNumber, true));
-        this.step(p);
+        if (this.upgraded)
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(
+                    p, p, new RhythmPower(p, this.rhythm), this.rhythm, true));
     }
 
     @Override
@@ -51,6 +54,7 @@ public class BeatOfLife
         if (!this.upgraded) {
             this.rhythm += UPGRADE_RHYTHM;
             this.rawDescription = DESCRIPTION + EXTENDED_DESCRIPTION[0] + this.rhythm + EXTENDED_DESCRIPTION[1];
+            this.initializeDescription();
             this.upgradeName();
         }
     }

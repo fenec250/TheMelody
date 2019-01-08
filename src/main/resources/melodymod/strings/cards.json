@@ -61,6 +61,11 @@
     "DESCRIPTION": "Gain !B! Block. NL Dance 1",
     "UPGRADE_DESCRIPTION": ""
   },
+  "melodymod:FallingLeaves": {
+    "NAME": "Falling Leaves",
+    "DESCRIPTION": "Draw 1 card for each step of the current dance. NL Dance 0. Exhaust",
+    "UPGRADE_DESCRIPTION": "Draw 1 card for each step of the current dance. NL Dance 0."
+  },
   "melodymod:PiercingChant": {
     "NAME": "Piercing Chant",
     "DESCRIPTION": "Reduce the strength of all enemies by !M! for this turn. NL Gain 2 Rhythm. NL Exhaust",

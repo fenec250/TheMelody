@@ -94,6 +94,7 @@ public class MelodyMod implements EditCardsSubscriber, EditCharactersSubscriber,
         BaseMod.addCard(new Spin());
         BaseMod.addCard(new TripleStep());
         //18 skills
+        BaseMod.addCard(new FallingLeaves());
         //6 powers
         BaseMod.addCard(new Refrain());
         BaseMod.addCard(new Hot());

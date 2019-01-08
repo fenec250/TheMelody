@@ -33,7 +33,7 @@ public abstract class AbstractMelodyCard extends CustomCard {
     }
 
 	protected void dance(AbstractPlayer p, int dance) {
-	    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DancePower(p, dance)));
+	    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DancePower(p, dance), dance));
     }
 
 	@Override
