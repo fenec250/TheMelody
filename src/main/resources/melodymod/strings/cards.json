@@ -53,12 +53,17 @@
   },
   "melodymod:RisingDove": {
     "NAME": "Rising Dove",
-    "DESCRIPTION": "Gain !B! Block. NL Dance 2: Apply !M! Weak",
+    "DESCRIPTION": "Gain !B! Block. NL Dance 2: Apply !M! Weak. TODO: redo this card",
+    "UPGRADE_DESCRIPTION": ""
+  },
+  "melodymod:RockStep": {
+    "NAME": "Rock Step",
+    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL Gain !M! Rhythm. NL Dance 0.",
     "UPGRADE_DESCRIPTION": ""
   },
   "melodymod:SideStep": {
     "NAME": "Side Step",
-    "DESCRIPTION": "Gain !B! Block. NL Dance 1",
+    "DESCRIPTION": "Gain !B! Block. NL Draw !M! card. NL Dance 1",
     "UPGRADE_DESCRIPTION": ""
   },
   "melodymod:FallingLeaves": {
@@ -91,6 +96,11 @@
     "DESCRIPTION": "When you gain Rhythm, gain !M! time(s) as much block.",
     "UPGRADE_DESCRIPTION": "",
     "EXTENDED_DESCRIPTION": [" NL Gain "," Rhythm."]
+  },
+  "melodymod:ChaCha": {
+    "NAME": "Cha Cha",
+    "DESCRIPTION": "Add Triple Step, Side Step and Rock Step to your hand. NL Dance 3. Exhaust",
+    "UPGRADE_DESCRIPTION": "Add upgraded Triple Step, Side Step and Rock Step to your hand. NL Dance 3. Exhaust"
   },
   "melodymod:ShiningStar": {
     "NAME": "Shining Star",

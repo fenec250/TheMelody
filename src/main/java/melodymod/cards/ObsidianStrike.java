@@ -53,6 +53,7 @@ public class ObsidianStrike
     public float calculateModifiedCardDamage(AbstractPlayer p, AbstractMonster mo, float tmp) {
         if (p.hasPower(RhythmPower.POWER_ID)) {
             tmp += Math.min(p.getPower(RhythmPower.POWER_ID).amount * this.magicNumber, 0);
+            // TODO: the bonus damage is not affected by weak. It should deal reduced damage but stack at the same rate.
         }
         return tmp;
     }

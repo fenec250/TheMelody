@@ -35,7 +35,7 @@ public class StrikeMelody
         this.damage = this.baseDamage = DAMAGE_AMT;
         this.magicNumber = this.baseMagicNumber = RYTHME;
         this.tags.add(BaseModCardTags.BASIC_STRIKE);
-        this.tags.add(MelodyTags.IS_RYTHME);
+        this.tags.add(MelodyTags.IS_RHYTHM);
     }
 
     @Override

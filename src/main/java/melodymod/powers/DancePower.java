@@ -56,7 +56,6 @@ public class DancePower extends TwoAmountPower {
 	@Override
     public void onPlayCard(AbstractCard card, AbstractMonster m) {
         // if we stop dancing, stop dancing.
-        // if we continue Dancing the DanceAction should manage this power's amount.
         if (card.tags.stream().noneMatch(MelodyTags.IS_DANCE::equals)) {
 	        AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(
 			        this.owner, this.owner, this));

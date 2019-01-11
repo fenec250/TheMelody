@@ -1,10 +1,8 @@
 package melodymod.cards;
 
-import basemod.helpers.BaseModCardTags;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -15,12 +13,10 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.GainStrengthPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
-import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.vfx.combat.ShockWaveEffect;
 import melodymod.patches.AbstractCardEnum;
 import melodymod.patches.MelodyTags;
 import melodymod.powers.RhythmPower;
-import melodymod.powers.StepPower;
 
 import java.util.Iterator;
 
@@ -42,7 +38,7 @@ public class PiercingChant
                 CardType.SKILL, AbstractCardEnum.MELODY_LIME,
                 CardRarity.COMMON, CardTarget.SELF);
         this.magicNumber = this.baseMagicNumber = STRENGTH_DOWN;
-        this.tags.add(MelodyTags.IS_RYTHME);
+        this.tags.add(MelodyTags.IS_RHYTHM);
         this.exhaust = true;
     }
 

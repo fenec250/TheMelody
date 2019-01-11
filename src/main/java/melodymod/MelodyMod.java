@@ -83,6 +83,7 @@ public class MelodyMod implements EditCardsSubscriber, EditCharactersSubscriber,
         BaseMod.addCard(new Offbeat());
         BaseMod.addCard(new Clap());
         BaseMod.addCard(new Semibreve());
+        BaseMod.addCard(new RockStep());
         //8 skills
         BaseMod.addCard(new Rest());
 //        BaseMod.addCard(new RisingDove());
@@ -104,6 +105,7 @@ public class MelodyMod implements EditCardsSubscriber, EditCharactersSubscriber,
         //8 skills
         //6 powers
         BaseMod.addCard(new BeatOfLife());
+        BaseMod.addCard(new ChaCha());
     }
 
     @Override
@@ -119,6 +121,10 @@ public class MelodyMod implements EditCardsSubscriber, EditCharactersSubscriber,
         BaseMod.addKeyword(keywordTempo, "Comsume X Rhythm to unlock the associated effect for the rest of this combat.");
         String[] keywordGhost = {"ghost"};
         BaseMod.addKeyword(keywordGhost, "Exhaust, Ethereal, exhausts when discarded.");
+        String[] keywordDance = {"dance", "dances"};
+        BaseMod.addKeyword(keywordDance, "Playing a dance makes the next dance with a lower value free. Playing non-dance cards remove the effect.");
+        String[] keywordStep = {"step", "steps"};
+        BaseMod.addKeyword(keywordStep, "Steps are the number of consecutive dances you played.");
 
 //        String[] keywordCantrips = {"cantrip", "cantrips"};
 //        BaseMod.addKeyword(keywordCantrips, "Considered a [#5299DC]Spell[] so long as you've played fewer than 3 [#5299DC]Spells[] this turn.");

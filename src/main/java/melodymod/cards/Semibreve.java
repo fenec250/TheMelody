@@ -1,12 +1,9 @@
 package melodymod.cards;
 
-import basemod.helpers.BaseModCardTags;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -32,11 +29,11 @@ public class Semibreve
     public Semibreve() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION,
                 CardType.ATTACK, AbstractCardEnum.MELODY_LIME,
-                CardRarity.BASIC, CardTarget.ENEMY);
+                CardRarity.COMMON, CardTarget.ENEMY);
         this.damage = this.baseDamage = DAMAGE_AMT;
         this.isMultiDamage = true;
         this.magicNumber = this.baseMagicNumber = RYTHME;
-        this.tags.add(MelodyTags.IS_RYTHME);
+        this.tags.add(MelodyTags.IS_RHYTHM);
     }
 
     @Override

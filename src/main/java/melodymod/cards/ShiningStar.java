@@ -2,8 +2,6 @@ package melodymod.cards;
 
 import basemod.helpers.BaseModCardTags;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.FetchAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -13,7 +11,6 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import melodymod.patches.AbstractCardEnum;
 import melodymod.patches.MelodyTags;
-import melodymod.powers.RhythmPower;
 
 public class ShiningStar
         extends AbstractMelodyCard {
@@ -31,7 +28,7 @@ public class ShiningStar
                 CardType.SKILL, AbstractCardEnum.MELODY_LIME,
                 CardRarity.BASIC, CardTarget.SELF);
         this.tags.add(BaseModCardTags.BASIC_DEFEND);
-        this.tags.add(MelodyTags.IS_RYTHME);
+        this.tags.add(MelodyTags.IS_RHYTHM);
     }
 
     @Override

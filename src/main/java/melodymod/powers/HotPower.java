@@ -54,9 +54,14 @@ public class HotPower extends AbstractPower {
     @Override
     public void onApplyPower(AbstractPower power, AbstractCreature target, AbstractCreature source) {
         if (power.ID.equals(DancePower.POWER_ID)) {
+            int damage = ((TwoAmountPower) power).amount2;
+            if (target.hasPower(DancePower.POWER_ID))
+                damage += ((TwoAmountPower) target.getPower(DancePower.POWER_ID)).amount2;
+            // TODO: fix this so it deals 1 damage if the dance is going to reset?
             this.flashWithoutSound();
+            damage *= this.amount;
             AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(
-                    this.owner, DamageInfo.createDamageMatrix(((TwoAmountPower) power).amount2, true),
+                    this.owner, DamageInfo.createDamageMatrix(damage, true),
                     DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.FIRE, true));
         }
     }
