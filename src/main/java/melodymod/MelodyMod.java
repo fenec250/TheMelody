@@ -83,6 +83,7 @@ public class MelodyMod implements EditCardsSubscriber, EditCharactersSubscriber,
         BaseMod.addCard(new Offbeat());
         BaseMod.addCard(new Clap());
         BaseMod.addCard(new Semibreve());
+        BaseMod.addCard(new Shout());
         BaseMod.addCard(new RockStep());
         //8 skills
         BaseMod.addCard(new Rest());

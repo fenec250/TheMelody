@@ -35,6 +35,12 @@
     "DESCRIPTION": "Deal !D! damage to all enemies. NL Gain !M! Rhythm",
     "UPGRADE_DESCRIPTION": ""
   },
+  "melodymod:Shout": {
+    "NAME": "Shout",
+    "DESCRIPTION": "Deal !D! damage to all enemies. NL Tempo 3: Apply !M! weak, gain 2 Rhythm and exhaust",
+    "UPGRADE_DESCRIPTION": "",
+    "EXTENDED_DESCRIPTION": ["Deal !D! damage to all enemies. NL Apply !M! weak, gain 2 Rhythm and exhaust"]
+  },
   "melodymod:TripleStep": {
     "NAME": "Triple Steps",
     "DESCRIPTION": "Deal 3 times !D! damage. NL Dance 2",
