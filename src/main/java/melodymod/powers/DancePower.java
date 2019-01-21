@@ -3,7 +3,6 @@ package melodymod.powers;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.evacipated.cardcrawl.mod.stslib.powers.abstracts.TwoAmountPower;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -54,19 +53,26 @@ public class DancePower extends TwoAmountPower {
 	}
 
 	@Override
+	public void onRemove() {
+		super.onRemove();
+		this.amount = 0;
+		updateHandCosts();
+	}
+
+	@Override
     public void onPlayCard(AbstractCard card, AbstractMonster m) {
         // if we stop dancing, stop dancing.
         if (card.tags.stream().noneMatch(MelodyTags.IS_DANCE::equals)) {
 	        AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(
 			        this.owner, this.owner, this));
-	        this.amount = 0;
-	        updateHandCosts();
         }
     }
 
 	@Override
 	public void onDrawOrDiscard() {
 		super.onDrawOrDiscard();
+		// make sure the cards in hand are always updated
+		// may not work when a card is Fetched.
 		updateHandCosts();
 	}
 
@@ -98,6 +104,7 @@ public class DancePower extends TwoAmountPower {
 	}
 
 	private void updateDanceCost(AbstractMelodyCard card) {
+		// TODO: fix interaction with Mummified Hand
     	if (card.dance < this.amount)
 		    card.setCostForTurn(0, true);
 	    else

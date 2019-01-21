@@ -44,8 +44,9 @@ public class Refrain
     public void upgrade() {
         if (!this.upgraded) {
             this.isInnate = true;
-            this.rawDescription = UPGRADE_DESCRIPTION;
             this.upgradeName();
+            this.rawDescription = UPGRADE_DESCRIPTION;
+            this.initializeDescription();
         }
     }
 }

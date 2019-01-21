@@ -155,7 +155,9 @@ public class MelodyCharacter extends CustomPlayer {
         retVal.add(StrikeMelody.ID);
         retVal.add(StrikeMelody.ID);
         retVal.add(StrikeMelody.ID);
+        retVal.add(StrikeMelody.ID);
 
+        retVal.add(DefendMelody.ID);
         retVal.add(DefendMelody.ID);
         retVal.add(DefendMelody.ID);
         retVal.add(DefendMelody.ID);

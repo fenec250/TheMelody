@@ -19,84 +19,6 @@
     "DESCRIPTION": "Draw !M! card. Dance 3",
     "UPGRADE_DESCRIPTION": ""
   },
-  "melodymod:Clap": {
-    "NAME": "Clap",
-    "DESCRIPTION": "Deal !D! damage. NL Gain 1 Rhythm",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain 1 Rhythm. Draw !M! card"
-  },
-  "melodymod:Offbeat": {
-    "NAME": "Offbeat",
-    "DESCRIPTION": "Deal !D! damage. NL Tempo 1: hits twice",
-    "UPGRADE_DESCRIPTION": "",
-    "EXTENDED_DESCRIPTION": ["Deal !D! damage twice"]
-  },
-  "melodymod:Semibreve": {
-    "NAME": "Semibreve",
-    "DESCRIPTION": "Deal !D! damage to all enemies. NL Gain !M! Rhythm",
-    "UPGRADE_DESCRIPTION": ""
-  },
-  "melodymod:Shout": {
-    "NAME": "Shout",
-    "DESCRIPTION": "Deal !D! damage to all enemies. NL Tempo 3: Apply !M! weak, gain 2 Rhythm and exhaust",
-    "UPGRADE_DESCRIPTION": "",
-    "EXTENDED_DESCRIPTION": ["Deal !D! damage to all enemies. NL Apply !M! weak, gain 2 Rhythm and exhaust"]
-  },
-  "melodymod:TripleStep": {
-    "NAME": "Triple Steps",
-    "DESCRIPTION": "Deal 3 times !D! damage. NL Dance 2",
-    "UPGRADE_DESCRIPTION": ""
-  },
-  "melodymod:Spin": {
-    "NAME": "Spin",
-    "DESCRIPTION": "Deal !D! damage to all enemies. Tempo 2: add a ghost copy in your hand",
-    "UPGRADE_DESCRIPTION": "",
-    "EXTENDED_DESCRIPTION": ["Deal !D! damage to all enemies. Add a ghost copy in your hand."," NL ghost."]
-  },
-  "melodymod:Rest": {
-    "NAME": "Rest",
-    "DESCRIPTION": "Gain !B! Block. NL Tempo 1: Gain !M! Block next turn",
-    "UPGRADE_DESCRIPTION": ""
-  },
-  "melodymod:RisingDove": {
-    "NAME": "Rising Dove",
-    "DESCRIPTION": "Gain !B! Block. NL Dance 2: Apply !M! Weak. TODO: redo this card",
-    "UPGRADE_DESCRIPTION": ""
-  },
-  "melodymod:RockStep": {
-    "NAME": "Rock Step",
-    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL Gain !M! Rhythm. NL Dance 0.",
-    "UPGRADE_DESCRIPTION": ""
-  },
-  "melodymod:SideStep": {
-    "NAME": "Side Step",
-    "DESCRIPTION": "Gain !B! Block. NL Draw !M! card. NL Dance 1",
-    "UPGRADE_DESCRIPTION": ""
-  },
-  "melodymod:FallingLeaves": {
-    "NAME": "Falling Leaves",
-    "DESCRIPTION": "Draw 1 card for each step of the current dance. NL Dance 0. Exhaust",
-    "UPGRADE_DESCRIPTION": "Draw 1 card for each step of the current dance. NL Dance 0."
-  },
-  "melodymod:PiercingChant": {
-    "NAME": "Piercing Chant",
-    "DESCRIPTION": "Reduce the strength of all enemies by !M! for this turn. NL Gain 2 Rhythm. NL Exhaust",
-    "UPGRADE_DESCRIPTION": ""
-  },
-  "melodymod:PasDeDeux": {
-    "NAME": "Pas de Deux",
-    "DESCRIPTION": "Gain !B! block. Give 9 block. Dance 2: deal !D! damage to all enemies",
-    "UPGRADE_DESCRIPTION": ""
-  },
-  "melodymod:Refrain": {
-    "NAME": "Refrain",
-    "DESCRIPTION": "Gain !M! Rhythm at the start of your turn.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Gain !M! Rhythm at the start of your turn."
-  },
-  "melodymod:Hot": {
-    "NAME": "Hot",
-    "DESCRIPTION": "When you Dance, deal !M! damage times the number of Steps to all enemies",
-    "UPGRADE_DESCRIPTION": "When you Dance, deal !M! damage times the number of Steps to all enemies. NL Dance 2"
-  },
   "melodymod:BeatOfLife": {
     "NAME": "Beat of Life",
     "DESCRIPTION": "When you gain Rhythm, gain !M! time(s) as much block.",
@@ -108,10 +30,94 @@
     "DESCRIPTION": "Add Triple Step, Side Step and Rock Step to your hand. NL Dance 3. Exhaust",
     "UPGRADE_DESCRIPTION": "Add upgraded Triple Step, Side Step and Rock Step to your hand. NL Dance 3. Exhaust"
   },
-  "melodymod:ShiningStar": {
-    "NAME": "Shining Star",
-    "DESCRIPTION": "Fetch a Dance from your draw pile. NL Dance 1: gain Rhythm equal to that dance's cost.",
-    "UPGRADE_DESCRIPTION": "Fetch a Dance from your draw pile. Dance 1, 2, 3: gain Rhythm equal to that dance's cost."
+  "melodymod:Clap": {
+    "NAME": "Clap",
+    "DESCRIPTION": "Deal !D! damage. NL Gain 1 Rhythm",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain 1 Rhythm. Draw !M! card"
+  },
+  "melodymod:FallingLeaves": {
+    "NAME": "Falling Leaves",
+    "DESCRIPTION": "Draw 1 card for each step of the current dance. NL Dance 0. Exhaust",
+    "UPGRADE_DESCRIPTION": "Draw 1 card for each step of the current dance. NL Dance 0."
+  },
+  "melodymod:Hot": {
+    "NAME": "Hot",
+    "DESCRIPTION": "When you Dance, deal !M! damage times the number of Steps to all enemies",
+    "UPGRADE_DESCRIPTION": "When you Dance, deal !M! damage times the number of Steps to all enemies. NL Dance 2"
+  },
+  "melodymod:Offbeat": {
+    "NAME": "Offbeat",
+    "DESCRIPTION": "Deal !D! damage. NL Tempo 1: hits twice",
+    "UPGRADE_DESCRIPTION": "",
+    "EXTENDED_DESCRIPTION": ["Deal !D! damage twice"]
+  },
+  "melodymod:PasDeDeux": {
+    "NAME": "Pas de Deux",
+    "DESCRIPTION": "Gain !B! block. Give 9 block. Dance 2: deal !D! damage to all enemies",
+    "UPGRADE_DESCRIPTION": ""
+  },
+  "melodymod:PiercingChant": {
+    "NAME": "Piercing Chant",
+    "DESCRIPTION": "Reduce the strength of all enemies by !M! for this turn. NL Gain 2 Rhythm. NL Exhaust",
+    "UPGRADE_DESCRIPTION": ""
+  },
+  "melodymod:Refrain": {
+    "NAME": "Refrain",
+    "DESCRIPTION": "Gain !M! Rhythm at the start of your turn.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Gain !M! Rhythm at the start of your turn."
+  },
+  "melodymod:Rest": {
+    "NAME": "Rest",
+    "DESCRIPTION": "Gain !B! Block. NL Tempo 1: Gain !M! Block next turn",
+    "UPGRADE_DESCRIPTION": ""
+  },
+  "melodymod:RockStep": {
+    "NAME": "Rock Step",
+    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL Gain !M! Rhythm. NL Dance 0.",
+    "UPGRADE_DESCRIPTION": ""
+  },
+  "melodymod:Semibreve": {
+    "NAME": "Semibreve",
+    "DESCRIPTION": "Deal !D! damage to all enemies. NL Gain !M! Rhythm",
+    "UPGRADE_DESCRIPTION": ""
+  },
+  "melodymod:SideStep": {
+    "NAME": "Side Step",
+    "DESCRIPTION": "Gain !B! Block. NL Draw !M! card. NL Dance 1",
+    "UPGRADE_DESCRIPTION": ""
+  },
+  "melodymod:Shout": {
+    "NAME": "Shout",
+    "DESCRIPTION": "Deal !D! damage to all enemies. NL Tempo 3: Apply !M! weak, gain 2 Rhythm and exhaust",
+    "UPGRADE_DESCRIPTION": "",
+    "EXTENDED_DESCRIPTION": ["Deal !D! damage to all enemies. NL Apply !M! weak, gain 2 Rhythm and exhaust"]
+  },
+  "melodymod:Spin": {
+    "NAME": "Spin",
+    "DESCRIPTION": "Deal !D! damage to all enemies. Tempo 2: add a ghost copy in your hand",
+    "UPGRADE_DESCRIPTION": "",
+    "EXTENDED_DESCRIPTION": ["Deal !D! damage to all enemies. Add a ghost copy in your hand."," NL ghost."]
+  },
+  "melodymod:Stomp": {
+    "NAME": "Stomp",
+    "DESCRIPTION": "Dance 2. NL Deal !D! damage. NL End the current Dance.",
+    "UPGRADE_DESCRIPTION": ""
+  },
+  "melodymod:TakeLead": {
+    "NAME": "Take the lead",
+    "DESCRIPTION": "Fetch !M! Dance from your draw pile. NL Dance 3.",
+    "UPGRADE_DESCRIPTION": ""
+  },
+  "melodymod:TripleStep": {
+    "NAME": "Triple Steps",
+    "DESCRIPTION": "Deal 3 times !D! damage. NL Dance 2",
+    "UPGRADE_DESCRIPTION": ""
+  },
+  "melodymod:Whip": {
+    "NAME": "Whip",
+    "DESCRIPTION": "Apply !M! Weak. NL Dance 2. NL Tempo 2: Deal !D! damage.",
+    "UPGRADE_DESCRIPTION": "",
+    "EXTENDED_DESCRIPTION": ["Deal !D! damage to all enemies. Add a ghost copy in your hand."," NL ghost."]
   },
 
 

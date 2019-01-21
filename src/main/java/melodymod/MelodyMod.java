@@ -61,7 +61,7 @@ public class MelodyMod implements EditCardsSubscriber, EditCharactersSubscriber,
     public void receivePostInitialize() {
         Texture badgeImg = new Texture("mysticmod/images/badge.png");
         settingsPanel = new ModPanel();
-        BaseMod.registerModBadge(badgeImg, "The Melody Mod", "Fenec250, Johnny Devo", "Adds a new character to the game: The Melody.", settingsPanel);
+        BaseMod.registerModBadge(badgeImg, "The Melody Mod", "Fenec250", "Adds a new character to the game: The Melody.", settingsPanel);
     }
 
     @Override
@@ -85,9 +85,9 @@ public class MelodyMod implements EditCardsSubscriber, EditCharactersSubscriber,
         BaseMod.addCard(new Semibreve());
         BaseMod.addCard(new Shout());
         BaseMod.addCard(new RockStep());
+        BaseMod.addCard(new Whip());
         //8 skills
         BaseMod.addCard(new Rest());
-//        BaseMod.addCard(new RisingDove());
         BaseMod.addCard(new SideStep());
         BaseMod.addCard(new PiercingChant());
 
@@ -103,10 +103,12 @@ public class MelodyMod implements EditCardsSubscriber, EditCharactersSubscriber,
 
         //Rares.
         //4 attacks
+        BaseMod.addCard(new Stomp());
         //8 skills
+        BaseMod.addCard(new ChaCha());
+        BaseMod.addCard(new TakeLead());
         //6 powers
         BaseMod.addCard(new BeatOfLife());
-        BaseMod.addCard(new ChaCha());
     }
 
     @Override

@@ -20,7 +20,7 @@ public class FallingLeaves
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     public static final String IMG_PATH = "melodymod/images/cards/defend.png";
-    private static final int COST = 0;
+    private static final int COST = 1;
     private static final int DANCE = 0;
 
     public FallingLeaves() {
