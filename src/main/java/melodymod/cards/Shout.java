@@ -35,8 +35,6 @@ public class Shout
     private static final int RHYTHM = 2;
     private static final int TEMPO = 3;
 
-    boolean tempoActive;
-
     public Shout() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION,
                 CardType.ATTACK, AbstractCardEnum.MELODY_LIME,
@@ -44,16 +42,33 @@ public class Shout
         this.damage = this.baseDamage = DAMAGE_AMT;
         this.isMultiDamage = true;
         this.magicNumber = this.baseMagicNumber = WEAK;
-        this.tempoActive = false;
+        this.tempo = TEMPO;
         this.tags.add(MelodyTags.IS_TEMPO);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.tempo(p);
+        if (this.tempo(p)) {
+            this.rawDescription = EXTENDED_DESCRIPTION[0];
+            this.initializeDescription();
+
+            this.exhaust = true;
+            this.tags.add(MelodyTags.IS_RHYTHM);
+        }
         AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(
                 p, this.multiDamage, this.damageTypeForTurn,
                 AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+        if (tempoActive)
+        {
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new RhythmPower(p, RHYTHM), RHYTHM));
+
+            Iterator var3 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
+
+            while (var3.hasNext()) {
+                AbstractMonster mo = (AbstractMonster) var3.next();
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, p, new WeakPower(mo, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
+            }
+        }
     }
 
     @Override
@@ -67,30 +82,6 @@ public class Shout
             this.upgradeName();
             this.upgradeDamage(UPGRADE_DAMAGE_AMT);
             this.upgradeMagicNumber(UPGRADE_WEAK);
-        }
-    }
-
-    private void tempo(AbstractPlayer p) {
-        // try to consume Tempo
-        if (!tempoActive && p.hasPower(RhythmPower.POWER_ID) && p.getPower(RhythmPower.POWER_ID).amount >= TEMPO) {
-            AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(p, p, RhythmPower.POWER_ID, TEMPO));
-            tempoActive = true;
-            this.rawDescription = EXTENDED_DESCRIPTION[0];
-            this.initializeDescription();
-
-            this.exhaust = true;
-            this.tags.add(MelodyTags.IS_RHYTHM);
-        }
-        if (tempoActive)
-        {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new RhythmPower(p, RHYTHM), RHYTHM));
-
-            Iterator var3 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
-
-            while (var3.hasNext()) {
-                AbstractMonster mo = (AbstractMonster) var3.next();
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, p, new WeakPower(mo, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
-            }
         }
     }
 }

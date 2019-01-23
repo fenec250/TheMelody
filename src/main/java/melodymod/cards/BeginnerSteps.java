@@ -1,8 +1,5 @@
 package melodymod.cards;
 
-import basemod.helpers.BaseModCardTags;
-import com.evacipated.cardcrawl.mod.stslib.actions.common.RefundAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -12,8 +9,6 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import melodymod.patches.AbstractCardEnum;
 import melodymod.patches.MelodyTags;
-import melodymod.powers.DancePower;
-import melodymod.powers.StepPower;
 
 public class BeginnerSteps
         extends AbstractMelodyCard {

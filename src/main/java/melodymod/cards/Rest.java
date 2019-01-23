@@ -43,7 +43,6 @@ public class Rest
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.step(p);
         // try to consume Tempo
         if (!tempoActive && p.hasPower(RhythmPower.POWER_ID) && p.getPower(RhythmPower.POWER_ID).amount >= TEMPO) {
             AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(p, p, RhythmPower.POWER_ID, TEMPO));

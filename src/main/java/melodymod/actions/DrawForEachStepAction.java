@@ -6,7 +6,6 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import melodymod.powers.DancePower;
-import melodymod.powers.StepPower;
 
 public class DrawForEachStepAction extends AbstractGameAction {
 

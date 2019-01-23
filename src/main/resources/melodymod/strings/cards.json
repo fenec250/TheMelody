@@ -117,7 +117,7 @@
     "NAME": "Whip",
     "DESCRIPTION": "Apply !M! Weak. NL Dance 2. NL Tempo 2: Deal !D! damage.",
     "UPGRADE_DESCRIPTION": "",
-    "EXTENDED_DESCRIPTION": ["Deal !D! damage to all enemies. Add a ghost copy in your hand."," NL ghost."]
+    "EXTENDED_DESCRIPTION": ["Apply !M! Weak. NL Deal !D! damage. NL Dance 2."]
   },
 
 

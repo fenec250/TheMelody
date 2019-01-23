@@ -40,7 +40,6 @@ public class StrikeMelody
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.step(p);
         AbstractDungeon.actionManager.addToBottom(new DamageAction(
                 m, new DamageInfo(p, this.damage, this.damageTypeForTurn),
                 AbstractGameAction.AttackEffect.BLUNT_HEAVY));

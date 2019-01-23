@@ -26,7 +26,6 @@ public class Spin
     private static final int UPGRADE_DAMAGE_AMT = 3;
     private static final int TEMPO = 2;
 
-    boolean tempoActive;
     boolean isEcho;
 
     public Spin() {
@@ -37,17 +36,14 @@ public class Spin
         this.isMultiDamage = true;
         this.tags.add(MelodyTags.IS_TEMPO);
 
-        this.tempoActive = false;
+        this.tempo = TEMPO;
         this.isEcho = false;
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.step(p);
-        if (!tempoActive && p.hasPower(RhythmPower.POWER_ID) && p.getPower(RhythmPower.POWER_ID).amount >= TEMPO) {
-            AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(p, p, RhythmPower.POWER_ID, TEMPO));
-            tempoActive = true;
-            this.rawDescription = EXTENDED_DESCRIPTION[0]; // does not work yet
+        if (this.tempo(p)) {
+            this.rawDescription = EXTENDED_DESCRIPTION[0];
             initializeDescription();
         }
 

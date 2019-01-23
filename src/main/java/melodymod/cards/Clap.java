@@ -40,8 +40,6 @@ public class Clap
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.step(p);
-
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new RhythmPower(p, RHYTHM), this.magicNumber, true));
 

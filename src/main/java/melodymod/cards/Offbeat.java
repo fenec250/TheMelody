@@ -28,24 +28,18 @@ public class Offbeat
     private static final int UPGRADE_DAMAGE_AMT = 3;
     private static final int TEMPO = 1;
 
-    boolean tempoActive;
-
     public Offbeat() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION,
                 CardType.ATTACK, AbstractCardEnum.MELODY_LIME,
                 CardRarity.COMMON, CardTarget.ENEMY);
         this.damage = this.baseDamage = DAMAGE_AMT;
         this.tags.add(MelodyTags.IS_TEMPO);
-        this.tempoActive = false;
+        this.tempo = TEMPO;
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.step(p);
-        // try to consume Tempo
-        if (!tempoActive && p.hasPower(RhythmPower.POWER_ID) && p.getPower(RhythmPower.POWER_ID).amount >= TEMPO) {
-            AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(p, p, RhythmPower.POWER_ID, TEMPO));
-            tempoActive = true;
+        if (this.tempo(p)) {
             this.rawDescription = EXTENDED_DESCRIPTION[0];
             this.initializeDescription();
         }

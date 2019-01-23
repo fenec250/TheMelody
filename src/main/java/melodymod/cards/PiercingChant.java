@@ -44,7 +44,6 @@ public class PiercingChant
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.step(p);
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new RhythmPower(p, RHYTHM), this.RHYTHM, true));
 
         //copy from PiercingWail

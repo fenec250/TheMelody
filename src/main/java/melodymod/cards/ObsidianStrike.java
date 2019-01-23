@@ -39,7 +39,6 @@ public class ObsidianStrike
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.step(p);
         // try to increase damage
         if (p.hasPower(RhythmPower.POWER_ID)) {
             int damageIncrease = Math.max(p.getPower(RhythmPower.POWER_ID).amount * this.magicNumber, 0);

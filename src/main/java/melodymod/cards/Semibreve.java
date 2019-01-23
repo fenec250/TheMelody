@@ -38,7 +38,6 @@ public class Semibreve
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.step(p);
         AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(
                 p, this.multiDamage, this.damageTypeForTurn,
                 AbstractGameAction.AttackEffect.BLUNT_HEAVY));
