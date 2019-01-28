@@ -30,6 +30,11 @@
     "DESCRIPTION": "Add Triple Step, Side Step and Rock Step to your hand. NL Dance 3. Exhaust",
     "UPGRADE_DESCRIPTION": "Add upgraded Triple Step, Side Step and Rock Step to your hand. NL Dance 3. Exhaust"
   },
+  "melodymod:Choreography": {
+    "NAME": "Choreography",
+    "DESCRIPTION": "At the beggining of your turn, dance !M!",
+    "UPGRADE_DESCRIPTION": ""
+  },
   "melodymod:Clap": {
     "NAME": "Clap",
     "DESCRIPTION": "Deal !D! damage. NL Gain 1 Rhythm",
@@ -73,8 +78,9 @@
   },
   "melodymod:RockStep": {
     "NAME": "Rock Step",
-    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL Gain !M! Rhythm. NL Dance 0.",
-    "UPGRADE_DESCRIPTION": ""
+    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL Gain !M! Rhythm. NL Tempo 1: Dance 0.",
+    "UPGRADE_DESCRIPTION": "",
+    "EXTENDED_DESCRIPTION": ["Gain !B! Block. NL Deal !D! damage. NL Gain !M! Rhythm. NL Dance 0."]
   },
   "melodymod:Semibreve": {
     "NAME": "Semibreve",

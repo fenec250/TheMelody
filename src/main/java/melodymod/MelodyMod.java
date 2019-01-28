@@ -109,6 +109,7 @@ public class MelodyMod implements EditCardsSubscriber, EditCharactersSubscriber,
         BaseMod.addCard(new TakeLead());
         //6 powers
         BaseMod.addCard(new BeatOfLife());
+        BaseMod.addCard(new Choreography());
     }
 
     @Override

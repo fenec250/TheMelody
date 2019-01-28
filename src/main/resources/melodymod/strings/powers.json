@@ -7,17 +7,23 @@
     "NAME": "Dance",
     "DESCRIPTIONS": ["The next card played is free if it is a Dance less than ", ". You played ", " steps in this dance"]
   },
-  "melodymod:RefrainPower": {
-    "NAME": "Refrain",
-    "DESCRIPTIONS": ["Gain ", " Rhythm at the start of your turn."]
+
+
+  "melodymod:BeatOfLifePower": {
+    "NAME": "Beat of Life",
+    "DESCRIPTIONS": ["When you gain Rhythm, gain ", "as much block.", " times as much block."]
+  },
+  "melodymod:ChoreographyPower": {
+    "NAME": "Choreography",
+    "DESCRIPTIONS": ["At the beggining of your turn, dance "]
   },
   "melodymod:HotPower": {
     "NAME": "Hot",
     "DESCRIPTIONS": ["When you Dance, deal ", " damage times the number of Steps to all enemies"]
   },
-  "melodymod:BeatOfLifePower": {
-    "NAME": "Beat of Life",
-    "DESCRIPTIONS": ["When you gain Rhythm, gain ", "as much block.", " times as much block."]
+  "melodymod:RefrainPower": {
+    "NAME": "Refrain",
+    "DESCRIPTIONS": ["Gain ", " Rhythm at the start of your turn."]
   },
 
 

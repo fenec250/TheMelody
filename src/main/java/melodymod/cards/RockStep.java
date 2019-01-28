@@ -23,11 +23,13 @@ public class RockStep
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+    public static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
     public static final String IMG_PATH = "melodymod/images/cards/strike.png";
     private static final int COST = 1;
     private static final int DAMAGE_BLOCK_AMT = 4;
     private static final int UPGRADE_DAMAGE_BLOCK_AMT = 2;
     private static final int RYTHME = 1;
+    private static final int TEMPO = 1;
     private static final int DANCE = 0;
 
     public RockStep() {
@@ -37,9 +39,10 @@ public class RockStep
         this.damage = this.baseDamage = DAMAGE_BLOCK_AMT;
         this.block = this.baseBlock = DAMAGE_BLOCK_AMT;
         this.magicNumber = this.baseMagicNumber = RYTHME;
+        this.tempo = TEMPO;
         this.dance = DANCE;
         this.tags.add(MelodyTags.IS_RHYTHM);
-        this.tags.add(MelodyTags.IS_DANCE);
+        this.tags.add(MelodyTags.IS_TEMPO);
     }
 
     @Override
@@ -47,10 +50,16 @@ public class RockStep
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m,
                 new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(
                 p, p, new RhythmPower(p, this.magicNumber), this.magicNumber, true));
-        this.dance(p);
+
+        if (this.tempo(p)) {
+            this.tags.add(MelodyTags.IS_DANCE);
+            this.rawDescription = EXTENDED_DESCRIPTION[0];
+            initializeDescription();
+        }
+        if (this.tempoActive)
+            this.dance(p);
     }
 
     @Override

@@ -62,6 +62,8 @@ public class ChaCha
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
+            this.rawDescription = UPGRADE_DESCRIPTION;
+            this.initializeDescription();
         }
         // could track multi-upgrade and apply them to the generated cards?
     }

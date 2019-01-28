@@ -41,7 +41,7 @@ public class Whip
     public Whip() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION,
                 CardType.ATTACK, AbstractCardEnum.MELODY_LIME,
-                CardRarity.RARE, CardTarget.ENEMY);
+                CardRarity.UNCOMMON, CardTarget.ENEMY);
         this.damage = this.baseDamage = DAMAGE;
         this.magicNumber = this.baseMagicNumber = WEAK;
         this.dance = DANCE;

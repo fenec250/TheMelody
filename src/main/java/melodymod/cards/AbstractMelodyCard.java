@@ -25,6 +25,7 @@ public abstract class AbstractMelodyCard extends CustomCard {
                               final AbstractCard.CardType type, final AbstractCard.CardColor color,
                               final AbstractCard.CardRarity rarity, final AbstractCard.CardTarget target) {
         super(id, name, img, cost, rawDescription, type, color, rarity, target);
+        this.preDanceCost = this.cost;
     }
 
     protected boolean tempo(AbstractPlayer p) {
