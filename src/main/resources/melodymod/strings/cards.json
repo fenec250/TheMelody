@@ -38,7 +38,7 @@
   "melodymod:Clap": {
     "NAME": "Clap",
     "DESCRIPTION": "Deal !D! damage. NL Gain 1 Rhythm",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain 1 Rhythm. Draw !M! card"
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain 1 Rhythm. NL Draw !M! card"
   },
   "melodymod:FallingLeaves": {
     "NAME": "Falling Leaves",
@@ -52,7 +52,7 @@
   },
   "melodymod:Offbeat": {
     "NAME": "Offbeat",
-    "DESCRIPTION": "Deal !D! damage. NL Tempo 1: hits twice",
+    "DESCRIPTION": "Deal !D! damage. NL Tempo !melodyMod:T!: hits twice",
     "UPGRADE_DESCRIPTION": "",
     "EXTENDED_DESCRIPTION": ["Deal !D! damage twice"]
   },
@@ -73,12 +73,12 @@
   },
   "melodymod:Rest": {
     "NAME": "Rest",
-    "DESCRIPTION": "Gain !B! Block. NL Tempo 1: Gain !M! Block next turn",
+    "DESCRIPTION": "Gain !B! Block. NL Tempo !melodyMod:T!: Gain !M! Block next turn",
     "UPGRADE_DESCRIPTION": ""
   },
   "melodymod:RockStep": {
     "NAME": "Rock Step",
-    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL Gain !M! Rhythm. NL Tempo 1: Dance 0.",
+    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL Gain !M! Rhythm. NL Tempo !melodyMod:T!: Dance 0.",
     "UPGRADE_DESCRIPTION": "",
     "EXTENDED_DESCRIPTION": ["Gain !B! Block. NL Deal !D! damage. NL Gain !M! Rhythm. NL Dance 0."]
   },
@@ -94,13 +94,13 @@
   },
   "melodymod:Shout": {
     "NAME": "Shout",
-    "DESCRIPTION": "Deal !D! damage to all enemies. NL Tempo 3: Apply !M! weak, gain 2 Rhythm and exhaust",
+    "DESCRIPTION": "Deal !D! damage to all enemies. NL Tempo !melodyMod:T!: Apply !M! weak, gain 2 Rhythm and exhaust",
     "UPGRADE_DESCRIPTION": "",
     "EXTENDED_DESCRIPTION": ["Deal !D! damage to all enemies. NL Apply !M! weak, gain 2 Rhythm and exhaust"]
   },
   "melodymod:Spin": {
     "NAME": "Spin",
-    "DESCRIPTION": "Deal !D! damage to all enemies. Tempo 2: add a ghost copy in your hand",
+    "DESCRIPTION": "Deal !D! damage to all enemies. Tempo !melodyMod:T!: add a ghost copy in your hand",
     "UPGRADE_DESCRIPTION": "",
     "EXTENDED_DESCRIPTION": ["Deal !D! damage to all enemies. Add a ghost copy in your hand."," NL ghost."]
   },
@@ -121,7 +121,7 @@
   },
   "melodymod:Whip": {
     "NAME": "Whip",
-    "DESCRIPTION": "Apply !M! Weak. NL Dance 2. NL Tempo 2: Deal !D! damage.",
+    "DESCRIPTION": "Apply !M! Weak. NL Dance 2. NL Tempo !melodyMod:T!: Deal !D! damage.",
     "UPGRADE_DESCRIPTION": "",
     "EXTENDED_DESCRIPTION": ["Apply !M! Weak. NL Deal !D! damage. NL Dance 2."]
   },

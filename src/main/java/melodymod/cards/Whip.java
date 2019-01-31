@@ -36,8 +36,6 @@ public class Whip
     private static final int WEAK = 2;
     private static final int TEMPO = 2;
 
-    boolean tempoActive;
-
     public Whip() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION,
                 CardType.ATTACK, AbstractCardEnum.MELODY_LIME,
@@ -45,6 +43,7 @@ public class Whip
         this.damage = this.baseDamage = DAMAGE;
         this.magicNumber = this.baseMagicNumber = WEAK;
         this.dance = DANCE;
+        this.tempo = TEMPO;
         this.tags.add(MelodyTags.IS_DANCE);
         this.tags.add(MelodyTags.IS_TEMPO);
     }
@@ -52,8 +51,11 @@ public class Whip
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.dance(p);
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new WeakPower(m, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
-        this.tempo(p, m);
+        AbstractDungeon.actionManager.addToBottom(
+                new ApplyPowerAction(m, p, new WeakPower(m, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
+        if (this.tempo(p)) {
+            AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn)));
+        }
     }
 
     @Override
@@ -67,17 +69,5 @@ public class Whip
             this.upgradeName();
             this.upgradeDamage(UPGRADE_PLUS_DAMAGE);
         }
-    }
-
-    private void tempo(AbstractPlayer p, AbstractMonster m) {
-        // try to consume Tempo
-        if (!tempoActive && p.hasPower(RhythmPower.POWER_ID) && p.getPower(RhythmPower.POWER_ID).amount >= TEMPO) {
-            AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(p, p, RhythmPower.POWER_ID, TEMPO));
-            tempoActive = true;
-            this.rawDescription = EXTENDED_DESCRIPTION[0];
-            this.initializeDescription();
-        }
-        if (tempoActive)
-            AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn)));
     }
 }

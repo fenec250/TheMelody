@@ -68,6 +68,7 @@ public class MelodyMod implements EditCardsSubscriber, EditCharactersSubscriber,
     public void receiveEditCards() {
         //secondMagicNumber dynamic variable
 //        BaseMod.addDynamicVariable(new AbstractMysticCard.SecondMagicNumber());
+        BaseMod.addDynamicVariable(new AbstractMelodyCard.TempoNumber());
 
         //Basic. 2 attacks, 2 skills
         BaseMod.addCard(new BeginnerSteps());

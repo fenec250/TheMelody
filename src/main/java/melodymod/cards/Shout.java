@@ -48,26 +48,23 @@ public class Shout
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (this.tempo(p)) {
-            this.rawDescription = EXTENDED_DESCRIPTION[0];
-            this.initializeDescription();
-
-            this.exhaust = true;
-            this.tags.add(MelodyTags.IS_RHYTHM);
-        }
         AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(
                 p, this.multiDamage, this.damageTypeForTurn,
                 AbstractGameAction.AttackEffect.BLUNT_LIGHT));
-        if (tempoActive)
-        {
+
+        if (this.tempo(p)) {
+            this.exhaust = true;
+
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new RhythmPower(p, RHYTHM), RHYTHM));
 
             Iterator var3 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
-
             while (var3.hasNext()) {
                 AbstractMonster mo = (AbstractMonster) var3.next();
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, p, new WeakPower(mo, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
             }
+        }
+        else {
+            this.exhaust = false;
         }
     }
 
@@ -83,5 +80,11 @@ public class Shout
             this.upgradeDamage(UPGRADE_DAMAGE_AMT);
             this.upgradeMagicNumber(UPGRADE_WEAK);
         }
+    }
+
+    @Override
+    public boolean hasTag(CardTags tag) {
+        return super.hasTag(tag)
+                || (tag.equals(MelodyTags.IS_RHYTHM) && this.tempo(AbstractDungeon.player));
     }
 }

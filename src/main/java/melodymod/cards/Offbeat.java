@@ -39,20 +39,15 @@ public class Offbeat
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (this.tempo(p)) {
-            this.rawDescription = EXTENDED_DESCRIPTION[0];
-            this.initializeDescription();
-        }
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-        if (tempoActive)
+        if (this.tempo(p)) {
             AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-
+        }
     }
 
     @Override
     public AbstractCard makeCopy() {
         Offbeat offbeat = new Offbeat();
-        offbeat.tempoActive = this.tempoActive;
         return offbeat;
     }
 

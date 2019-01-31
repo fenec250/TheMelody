@@ -54,12 +54,8 @@ public class RockStep
                 p, p, new RhythmPower(p, this.magicNumber), this.magicNumber, true));
 
         if (this.tempo(p)) {
-            this.tags.add(MelodyTags.IS_DANCE);
-            this.rawDescription = EXTENDED_DESCRIPTION[0];
-            initializeDescription();
-        }
-        if (this.tempoActive)
             this.dance(p);
+        }
     }
 
     @Override
@@ -74,5 +70,11 @@ public class RockStep
             this.upgradeDamage(UPGRADE_DAMAGE_BLOCK_AMT);
             this.upgradeBlock(UPGRADE_DAMAGE_BLOCK_AMT);
         }
+    }
+
+    @Override
+    public boolean hasTag(CardTags tag) {
+        return super.hasTag(tag)
+                || (tag.equals(MelodyTags.IS_DANCE) && this.tempo(AbstractDungeon.player));
     }
 }

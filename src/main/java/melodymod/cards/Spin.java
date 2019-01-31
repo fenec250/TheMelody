@@ -42,15 +42,11 @@ public class Spin
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (this.tempo(p)) {
-            this.rawDescription = EXTENDED_DESCRIPTION[0];
-            initializeDescription();
-        }
 
         AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(
                 p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.BLUNT_HEAVY));
 
-        if (tempoActive) {
+        if (this.tempo(p)) {
             Spin card = (Spin) this.makeStatEquivalentCopy();
             if (!this.isEcho)
                 card.name = "Echo: " + card.name;
@@ -90,7 +86,6 @@ public class Spin
     public AbstractCard makeCopy() {
         Spin copy = new Spin();
         copy.isEcho = this.isEcho;
-        copy.tempoActive = this.tempoActive;
         copy.rawDescription = this.rawDescription;
         copy.initializeDescription();
         return copy;

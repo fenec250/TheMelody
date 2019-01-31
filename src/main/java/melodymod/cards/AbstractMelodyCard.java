@@ -1,6 +1,7 @@
 package melodymod.cards;
 
 import basemod.abstracts.CustomCard;
+import basemod.abstracts.DynamicVariable;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -13,8 +14,10 @@ public abstract class AbstractMelodyCard extends CustomCard {
     public int dance = -1;
     public int preDanceCost;
 
-    public int tempo = -1;
-    public boolean tempoActive = false;
+    public int tempo = 0;
+    public int tempoBase = 0;
+	public boolean tempoModified = false;
+	public boolean tempoUpgraded = false;
 //    public boolean isDancing;
 //    public int baseSecondMagicNumber;
 //    public int secondMagicNumber;
@@ -33,9 +36,7 @@ public abstract class AbstractMelodyCard extends CustomCard {
     }
 
 	protected boolean tempo(AbstractPlayer p, int amount) {
-		if (!tempoActive && p.hasPower(RhythmPower.POWER_ID) && p.getPower(RhythmPower.POWER_ID).amount >= amount) {
-			AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(p, p, RhythmPower.POWER_ID, amount));
-			tempoActive = true;
+		if (p.hasPower(RhythmPower.POWER_ID) && p.getPower(RhythmPower.POWER_ID).amount >= amount) {
 			return true;
 		}
 		return false;
@@ -61,42 +62,39 @@ public abstract class AbstractMelodyCard extends CustomCard {
 			this.preDanceCost = this.costForTurn;
 	}
 
-	//
-//    public void upgradeToArte() {
-//        this.tags.add(MysticTags.IS_ARTE);
-//    }
-//
 //    public void upgradeSecondMagicNumber(int amount) {
 //        this.baseSecondMagicNumber += amount;
 //        this.secondMagicNumber = this.baseSecondMagicNumber;
 //        this.upgradedSecondMagicNumber = true;
+//
+//        this.tags.add(MysticTags.IS_ARTE);
 //    }
 //
-//    public static class SecondMagicNumber extends DynamicVariable {
-//
-//        @Override
-//        public int baseValue(AbstractCard card) {
-//            return ((AbstractMelodyCard)card).baseSecondMagicNumber;
-//        }
-//
-//        @Override
-//        public boolean isModified(AbstractCard card) {
-//            return ((AbstractMelodyCard)card).isSecondMagicNumberModified;
-//        }
-//
-//        @Override
-//        public String key() {
-//            return "mysticmod:M2";
-//        }
-//
-//        @Override
-//        public boolean upgraded(AbstractCard card) {
-//            return ((AbstractMelodyCard)card).upgradedSecondMagicNumber;
-//        }
-//
-//        @Override
-//        public int value(AbstractCard card) {
-//            return ((AbstractMelodyCard)card).secondMagicNumber;
-//        }
-//    }
+    public static class TempoNumber extends DynamicVariable {
+
+        @Override
+        public int baseValue(AbstractCard card) {
+            return ((AbstractMelodyCard) card).tempo;
+        }
+
+        @Override
+        public boolean isModified(AbstractCard card) {
+            return ((AbstractMelodyCard) card).tempoModified;
+        }
+
+        @Override
+        public String key() {
+            return "melodyMod:T";
+        }
+
+        @Override
+        public boolean upgraded(AbstractCard card) {
+            return ((AbstractMelodyCard) card).tempoUpgraded;
+        }
+
+        @Override
+        public int value(AbstractCard card) {
+            return ((AbstractMelodyCard) card).tempo;
+        }
+    }
 }

@@ -23,7 +23,7 @@ public class Rest
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     public static final String IMG_PATH = "melodymod/images/cards/defend.png";
     private static final int COST = 1;
-    private static final int BLOCK_AMT = 7;
+    private static final int BLOCK_AMT = 8;
     private static final int UPGRADE_PLUS_BLOCK = 3;
     private static final int TEMPO  = 2;
     private static final int TEMPO_BLOCK = 4;
@@ -38,19 +38,15 @@ public class Rest
         this.block = this.baseBlock = BLOCK_AMT;
         this.magicNumber = this.baseMagicNumber = TEMPO_BLOCK;
         this.tags.add(MelodyTags.IS_TEMPO);
-        this.tempoActive = false;
+        this.tempo = TEMPO;
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        // try to consume Tempo
-        if (!tempoActive && p.hasPower(RhythmPower.POWER_ID) && p.getPower(RhythmPower.POWER_ID).amount >= TEMPO) {
-            AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(p, p, RhythmPower.POWER_ID, TEMPO));
-            tempoActive = true;
-        }
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
-        if (tempoActive)
+        if (this.tempo(p)) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new NextTurnBlockPower(p, magicNumber), magicNumber));
+        }
     }
 
     @Override
